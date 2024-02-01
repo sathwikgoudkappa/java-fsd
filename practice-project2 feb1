@@ -1,0 +1,41 @@
+<dependencies>
+    <!-- JUnit 5 dependencies -->
+    <dependency>
+        <groupId>org.junit.jupiter</groupId>
+        <artifactId>junit-jupiter-api</artifactId>
+        <version>5.8.0</version>
+        <scope>test</scope>
+    </dependency>
+    <dependency>
+        <groupId>org.junit.jupiter</groupId>
+        <artifactId>junit-jupiter-engine</artifactId>
+        <version>5.8.0</version>
+        <scope>test</scope>
+    </dependency>
+</dependencies>
+
+
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+public class AssertionsTest {
+
+    @Test
+    public void testAssertions() {
+        // Test Equality
+        assertEquals(2, 1 + 1);
+
+        // Test Truthiness
+        assertTrue(5 > 3);
+
+        // Test Nullability
+        assertNull(null);
+
+        // Test Exception
+        assertThrows(ArithmeticException.class, () -> {
+            int result = 1 / 0;
+        });
+    }
+}
