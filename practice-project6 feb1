@@ -1,0 +1,46 @@
+<dependencies>
+    <!-- JUnit 5 dependencies -->
+    <dependency>
+        <groupId>org.junit.jupiter</groupId>
+        <artifactId>junit-jupiter-api</artifactId>
+        <version>5.8.0</version>
+        <scope>test</scope>
+    </dependency>
+    <dependency>
+        <groupId>org.junit.jupiter</groupId>
+        <artifactId>junit-jupiter-engine</artifactId>
+        <version>5.8.0</version>
+        <scope>test</scope>
+    </dependency>
+</dependencies>
+
+
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.api.extension.ParameterContext;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.ValueSource;
+
+@ExtendWith(MyParameterResolver.class)
+public class DependencyInjection {
+
+    private final String injectedValue;
+
+    public DependencyInjection(String injectedValue) {
+        this.injectedValue = injectedValue;
+    }
+
+    @Test
+    void testInjection() {
+        assertEquals("Injected Value", injectedValue);
+    }
+
+    @ParameterizedTest
+    @ValueSource(ints = { 1, 2, 3 })
+    void testParameterInjection(int value, @MyParameter String paramValue) {
+        assertEquals(value, Integer.parseInt(paramValue));
+    }
+}
