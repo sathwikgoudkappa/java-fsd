@@ -1,0 +1,45 @@
+<dependencies>
+    <!-- JUnit 5 dependencies -->
+    <dependency>
+        <groupId>org.junit.jupiter</groupId>
+        <artifactId>junit-jupiter-api</artifactId>
+        <version>5.8.0</version>
+        <scope>test</scope>
+    </dependency>
+    <dependency>
+        <groupId>org.junit.jupiter</groupId>
+        <artifactId>junit-jupiter-engine</artifactId>
+        <version>5.8.0</version>
+        <scope>test</scope>
+    </dependency>
+</dependencies>
+
+
+
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.condition.EnabledOnOs;
+import org.junit.jupiter.api.condition.OS;
+
+public class ConditionalTests {
+
+    @Test
+    @EnabledOnOs(OS.WINDOWS)
+    public void runOnWindows() {
+        // Test logic specific to Windows
+        System.out.println("Running on Windows");
+    }
+
+    @Test
+    @EnabledOnOs(OS.LINUX)
+    public void runOnLinux() {
+        // Test logic specific to Linux
+        System.out.println("Running on Linux");
+    }
+
+    @Test
+    @EnabledOnOs(OS.MAC)
+    public void runOnMac() {
+        // Test logic specific to macOS
+        System.out.println("Running on macOS");
+    }
+}
