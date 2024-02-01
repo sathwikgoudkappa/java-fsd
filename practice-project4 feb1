@@ -1,0 +1,94 @@
+<dependencies>
+    <!-- JUnit 5 dependencies -->
+    <dependency>
+        <groupId>org.junit.jupiter</groupId>
+        <artifactId>junit-jupiter-api</artifactId>
+        <version>5.8.0</version>
+        <scope>test</scope>
+    </dependency>
+    <dependency>
+        <groupId>org.junit.jupiter</groupId>
+        <artifactId>junit-jupiter-engine</artifactId>
+        <version>5.8.0</version>
+        <scope>test</scope>
+    </dependency>
+</dependencies>
+
+
+
+package com.example;
+
+public class Calculator {
+
+    public int add(int a, int b) {
+        return a + b;
+    }
+
+    public int subtract(int a, int b) {
+        return a - b;
+    }
+}
+
+
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Nested;
+import org.junit.jupiter.api.Test;
+
+import com.example.Calculator;
+
+public class NestedCases {
+
+    Calculator calculator;
+
+    @BeforeEach
+    void setUp() {
+        calculator = new Calculator();
+    }
+
+    @Nested
+    class AdditionTests {
+        @Test
+        void addPositiveNumbers() {
+            assertEquals(5, calculator.add(2, 3));
+        }
+
+        @Test
+        void addNegativeNumbers() {
+            assertEquals(-1, calculator.add(2, -3));
+        }
+    }
+
+    @Nested
+    class SubtractionTests {
+        @Test
+        void subtractPositiveNumbers() {
+            assertEquals(1, calculator.subtract(3, 2));
+        }
+
+        @Test
+        void subtractNegativeNumbers() {
+            assertEquals(-5, calculator.subtract(-2, 3));
+        }
+    }
+}
+
+
+
+import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.RepeatedTest;
+
+public class RepeatedTests {
+
+    @RepeatedTest(3)
+    void repeatedTest() {
+        // Test logic for repeated test
+        int result = 2 + 2;
+        assertEquals(4, result);
+    }
+}
+
+
+
