@@ -1,0 +1,56 @@
+<dependencies>
+    <!-- JUnit 5 dependencies -->
+    <dependency>
+        <groupId>org.junit.jupiter</groupId>
+        <artifactId>junit-jupiter-api</artifactId>
+        <version>5.8.0</version>
+        <scope>test</scope>
+    </dependency>
+    <dependency>
+        <groupId>org.junit.jupiter</groupId>
+        <artifactId>junit-jupiter-engine</artifactId>
+        <version>5.8.0</version>
+        <scope>test</scope>
+    </dependency>
+</dependencies>
+
+
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import java.util.stream.Stream;
+
+import org.junit.jupiter.api.DynamicTest;
+import org.junit.jupiter.api.TestFactory;
+
+public class DynamicTests {
+
+    @TestFactory
+    Stream<DynamicTest> dynamicTests() {
+        return Stream.of(
+                DynamicTest.dynamicTest("Addition Test", () -> assertEquals(4, add(2, 2))),
+                DynamicTest.dynamicTest("Subtraction Test", () -> assertEquals(2, subtract(4, 2))),
+                DynamicTest.dynamicTest("Multiplication Test", () -> assertEquals(6, multiply(3, 2))),
+                DynamicTest.dynamicTest("Division Test", () -> assertEquals(3, divide(6, 2)))
+        );
+    }
+
+    int add(int a, int b) {
+        return a + b;
+    }
+
+    int subtract(int a, int b) {
+        return a - b;
+    }
+
+    int multiply(int a, int b) {
+        return a * b;
+    }
+
+    int divide(int a, int b) {
+        return a / b;
+    }
+}
+
+
+
