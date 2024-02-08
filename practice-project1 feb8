@@ -1,0 +1,55 @@
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
+public class ExampleEntity {
+    @Id
+    private Long id;
+    private String name;
+    
+    // Getters and setters
+}
+
+
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface ExampleRepository extends JpaRepository<ExampleEntity, Long> {
+}
+
+
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+@Service
+public class ExampleService {
+    @Autowired
+    private ExampleRepository repository;
+    
+    // Methods for business logic
+}
+
+
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class ExampleController {
+    @Autowired
+    private ExampleService service;
+    
+    @GetMapping("/example")
+    public String getExample() {
+        // Call service methods and return response
+        return "Example response";
+    }
+}
+
+
+
+server.port=8080
