@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Static Web Page Example</title>
+  <!-- Bootstrap CSS via CDN -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Custom CSS -->
+  <style>
+    .jumbotron {
+      background-color: #f8f9fa;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+    .footer {
+      background-color: #343a40;
+      color: white;
+      padding: 10px 0;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div class="jumbotron">
+    <h1>Content Types, Body, Titles, Text, and Links</h1>
+    <p>This is a paragraph demonstrating the use of various content types, including titles, text, and links.</p>
+    <a href="#" class="btn btn-primary">Learn more</a>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <h2>Images</h2>
+      <img src="https://via.placeholder.com/150" class="img-fluid" alt="Placeholder Image">
+    </div>
+    <div class="col-md-6">
+      <h2>List Groups</h2>
+      <ul class="list-group">
+        <li class="list-group-item">Item 1</li>
+        <li class="list-group-item">Item 2</li>
+        <li class="list-group-item">Item 3</li>
+      </ul>
+    </div>
+  </div>
+
+  <hr>
+
+  <h2>Header and Footer</h2>
+  <p>This section demonstrates a header and a footer.</p>
+
+  <div class="footer">
+    <p>Footer &copy; 2024</p>
+  </div>
+
+</div>
+
+<!-- Bootstrap JS via CDN -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
