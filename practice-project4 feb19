@@ -1,0 +1,49 @@
+// Subsection 2.5.1: Writing a program in JavaScript to verify implementation of maps and classes
+
+// Creating a Map
+let myMap = new Map();
+
+// Adding elements to the Map
+myMap.set("key1", "value1");
+myMap.set("key2", "value2");
+myMap.set("key3", "value3");
+
+// Iterating over the Map
+console.log("Iterating over the Map:");
+myMap.forEach((value, key) => {
+  console.log(key + " => " + value);
+});
+
+// Defining a class
+class Person {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+  
+  // Method to display information about the person
+  displayInfo() {
+    console.log(`${this.name} is ${this.age} years old.`);
+  }
+}
+
+// Creating instances of the Person class
+let person1 = new Person("Alice", 30);
+let person2 = new Person("Bob", 25);
+
+// Calling the method of the Person class
+console.log("\nDisplaying information about people:");
+person1.displayInfo();
+person2.displayInfo();
+
+// Subsection 2.5.2: Executing the program and verifying implementation of maps and classes
+
+// Output:
+// Iterating over the Map:
+// key1 => value1
+// key2 => value2
+// key3 => value3
+
+// Displaying information about people:
+// Alice is 30 years old.
+// Bob is 25 years old.
