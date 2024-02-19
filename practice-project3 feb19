@@ -1,0 +1,46 @@
+// Subsection 2.3.1: Writing a program in JavaScript to verify implementations of IIFEs, callbacks, and closures
+
+// Immediately Invoked Function Expression (IIFE)
+(function() {
+  console.log("IIFE executed!");
+})();
+
+// Function with a callback
+function greet(name, callback) {
+  console.log("Hello, " + name + "!");
+  callback();
+}
+
+// Callback function
+function sayGoodbye() {
+  console.log("Goodbye!");
+}
+
+// Closure example
+function counter() {
+  var count = 0;
+  
+  function increment() {
+    count++;
+    console.log("Count:", count);
+  }
+  
+  return increment;
+}
+
+// Subsection 2.3.2: Executing the program and verifying working of IIFEs with callbacks and closures
+
+// Testing IIFE
+// Output: IIFE executed!
+
+// Testing function with a callback
+greet("Alice", sayGoodbye);
+// Output:
+// Hello, Alice!
+// Goodbye!
+
+// Testing closure
+var incrementCounter = counter();
+incrementCounter(); // Output: Count: 1
+incrementCounter(); // Output: Count: 2
+incrementCounter(); // Output: Count: 3
