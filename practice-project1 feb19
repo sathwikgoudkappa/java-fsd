@@ -1,0 +1,35 @@
+// Subsection 2.1.1: Writing a program in JavaScript to verify implementations of functions and prototypes
+
+// Function to create a Person object
+function Person(name, age) {
+  this.name = name;
+  this.age = age;
+}
+
+// Adding a method to the Person prototype
+Person.prototype.introduce = function() {
+  return `Hello, my name is ${this.name} and I am ${this.age} years old.`;
+};
+
+// Creating instances of Person
+let person1 = new Person("Alice", 30);
+let person2 = new Person("Bob", 25);
+
+// Subsection 2.1.2: Executing the program and verifying the working of functions and prototypes
+
+// Testing the introduce method
+console.log(person1.introduce()); // Output: Hello, my name is Alice and I am 30 years old.
+console.log(person2.introduce()); // Output: Hello, my name is Bob and I am 25 years old.
+
+// Checking if instances inherit properties from the prototype
+console.log(person1.hasOwnProperty("name")); // Output: true
+console.log(person2.hasOwnProperty("age"));  // Output: true
+
+// Adding a method directly to an instance
+person1.greet = function() {
+  return `Hi, I'm ${this.name}. Nice to meet you!`;
+};
+
+// Testing the newly added method
+console.log(person1.greet()); // Output: Hi, I'm Alice. Nice to meet you!
+// console.log(person2.greet()); // This will throw an error as greet is not defined for person2
