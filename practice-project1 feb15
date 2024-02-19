@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap Example</title>
+  <!-- Bootstrap CSS via CDN -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container">
+  <h1>Bootstrap Example</h1>
+  <p>This is a simple Bootstrap example.</p>
+</div>
+
+<!-- Option 1: Load Bootstrap JS via CDN -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<!-- Option 2: Use a local copy of Bootstrap JS -->
+<!-- <script src="path/to/bootstrap/js/bootstrap.min.js"></script> -->
+</body>
+</html>
