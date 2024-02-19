@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Static Web Page Example</title>
+  <!-- Bootstrap CSS via CDN -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Font Awesome CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <!-- Custom CSS -->
+  <style>
+    /* Custom styles go here */
+  </style>
+</head>
+<body>
+
+<!-- Header -->
+<header>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">My Website</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<!-- Content -->
+<div class="container mt-5">
+  <!-- Section 1: Content Types, Body, Titles, Text, and Links -->
+  <section>
+    <h2>Content Types, Body, Titles, Text, and Links</h2>
+    <p>This is a paragraph demonstrating various content types, including titles, text, and links.</p>
+    <a href="#" class="btn btn-primary">Learn more</a>
+  </section>
+
+  <!-- Section 2: Images, List Groups -->
+  <section class="mt-5">
+    <div class="row">
+      <div class="col-md-6">
+        <h2>Images</h2>
+        <img src="https://via.placeholder.com/300" class="img-fluid" alt="Placeholder Image">
+      </div>
+      <div class="col-md-6">
+        <h2>List Groups</h2>
+        <ul class="list-group">
+          <li class="list-group-item">Item 1</li>
+          <li class="list-group-item">Item 2</li>
+          <li class="list-group-item">Item 3</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3: Text alignment -->
+  <section class="mt-5">
+    <h2>Text Alignment</h2>
+    <p class="text-left">Left aligned text.</p>
+    <p class="text-center">Center aligned text.</p>
+    <p class="text-right">Right aligned text.</p>
+  </section>
+
+  <!-- Section 4: Cards, Tables -->
+  <section class="mt-5">
+    <div class="row">
+      <div class="col-md-6">
+        <h2>Cards</h2>
+        <div class="card">
+          <div class="card-body">
+            This is a card.
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <h2>Tables</h2>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>First Name</th>
+              <th>Last Name</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>John</td>
+              <td>Doe</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Jane</td>
+              <td>Smith</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 5: Buttons, Badges -->
+  <section class="mt-5">
+    <h2>Buttons, Badges</h2>
+    <button class="btn btn-primary">Primary Button</button>
+    <button class="btn btn-secondary">Secondary Button</button>
+    <span class="badge badge-primary">New</span>
+    <span class="badge badge-secondary">Pending</span>
+  </section>
+
+  <!-- Section 6: Glyphicons -->
+  <section class="mt-5">
+    <h2>Glyphicons</h2>
+    <i class="fas fa-heart"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-envelope"></i>
+  </section>
+
+</div>
+
+<!-- Footer -->
+<footer class="bg-dark text-white text-center py-3">
+  &copy; 2024 My Website
+</footer>
+
+<!-- Bootstrap JS via CDN -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
