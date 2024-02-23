@@ -1,0 +1,4 @@
+<p>{{ 'hello world' | uppercase }}</p>
+ng generate pipe myPipe
+<p>{{ someValue | myPipe }}</p>
+<p>{{ someValue | myPipe:param1:param2 }}</p>
