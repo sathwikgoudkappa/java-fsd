@@ -1,0 +1,4 @@
+npm install -g @angular/cli
+ng new my-angular-project
+cd my-angular-project
+ng generate component my-component
