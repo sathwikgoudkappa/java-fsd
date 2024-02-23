@@ -1,0 +1,21 @@
+npm install -g @angular/cli
+ng new my-angular-project
+cd my-angular-project
+ng add @angular/router
+import { NgModule } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
+import { SignupComponent } from './signup/signup.component';
+
+const routes: Routes = [
+  { path: 'signup', component: SignupComponent },
+  // Add more routes as needed
+];
+
+@NgModule({
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
+})
+export class AppRoutingModule { }
+ng generate component signup
+<router-outlet></router-outlet>
+<input type="text" formControlName="username" required>
