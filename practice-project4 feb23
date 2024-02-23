@@ -1,0 +1,14 @@
+<button (click)="onClick()">Click me</button>
+export class MyComponentComponent {
+  onClick() {
+    // Your logic here
+    console.log('Button clicked!');
+  }
+}
+<button (click)="onClick($event)">Click me</button>
+export class MyComponentComponent {
+  onClick(event: MouseEvent) {
+    // Access event properties
+    console.log('Button clicked!', event);
+  }
+}
