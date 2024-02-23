@@ -1,0 +1,6 @@
+ng new my-angular-project
+cd my-angular-project
+ng generate component my-component
+<p>
+  my-component works!
+</p>
