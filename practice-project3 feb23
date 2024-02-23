@@ -1,0 +1,27 @@
+<button [disabled]="isButtonDisabled">Click me</button>
+export class MyComponentComponent {
+  isButtonDisabled: boolean = true; // Set to true initially or based on a condition
+
+  // Some method where you can toggle the disabled state
+  toggleButtonState() {
+    this.isButtonDisabled = !this.isButtonDisabled;
+  }
+}
+<div [class.active]="isActive">Content</div>
+export class MyComponentComponent {
+  isActive: boolean = true; // Set to true initially or based on a condition
+
+  // Some method where you can toggle the active state
+  toggleActiveState() {
+    this.isActive = !this.isActive;
+  }
+}
+<p [style.color]="isError ? 'red' : 'green'">Some text</p>
+export class MyComponentComponent {
+  isError: boolean = false; // Set to false initially or based on a condition
+
+  // Some method where you can toggle the error state
+  toggleErrorState() {
+    this.isError = !this.isError;
+  }
+}
